@@ -75,8 +75,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install Ninja (Windows)
-        uses: turtlesec-no/get-ninja@v1
+      - name: Install Ninja
+        run: |
+          choco install ninja -y
 
       - name: Get Skia from cache
         id: skia-cache
